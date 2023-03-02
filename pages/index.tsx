@@ -2,6 +2,8 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { Employee, loadEmployees } from "@/lib/loadEmployees";
 import { NextPage } from "next";
+import EmployeeGrid from "@/components/EmployeeGrid";
+import Filter from "@/components/Filter";
 
 type Props = {
   employees: Employee[];
@@ -16,12 +18,8 @@ const HomePage: NextPage<Props> = ({ employees }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1>Assignment</h1>
-        {employees.map((emp) => (
-          <div key={emp.email}>
-            <p>{emp.name}</p>
-          </div>
-        ))}
+        <Filter />
+        <EmployeeGrid {...{ employees }} />
       </main>
     </>
   );

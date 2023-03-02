@@ -1,0 +1,44 @@
+.card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: var(--surfaceBg);
+
+    box-shadow: var(--boxShadow);
+}
+.imageContainer {
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.noImageIcon {
+    font-size: 8rem;
+}
+.titleContainer {
+    align-items: center;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    width: 100%;
+}
+.title {
+    font-size: 1.1rem;
+}
+.socialsContainer {
+    align-items: center;
+    display: flex;
+}
+.socialIcon {
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+}
+
+.body {
+    margin-top: 1rem;
+    width: 100%;
+}

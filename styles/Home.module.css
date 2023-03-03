@@ -1,10 +1,43 @@
 .filterContainer {
-    padding: 2rem;
+    border-radius: var(--borderRadius);
+    padding: 1rem;
     align-items: center;
     background-color: white;
     display: flex;
-    justify-content: flex-end;
-    height: 80px;
+    justify-content: space-between;
     margin-top: 2rem;
     box-shadow: var(--boxShadow);
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+.inputLabel {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+.input {
+    border: 0;
+    border: 2px solid var(--13Blue);
+    border-radius: var(--borderRadius);
+    padding: 0.5rem;
+    margin-top: 8px;
+    width: 12rem;
+}
+.cityFilterContainer {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+}
+.boxesContainer {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+.checkboxLabel {
+    margin-right: 8px;
 }

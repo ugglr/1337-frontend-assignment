@@ -38,7 +38,7 @@ The only packages I've installed on top of the default Next.js starter project a
 | Functionality                                     |         |
 | ------------------------------------------------- | ------- |
 | Sort by name and office                           |         |
-| Filter by name and office                         |         |
+| Filter by name and office                         | ✅      |
 | Enable switch between a grid and a different view | ✅      |
 | Available on a free public url                    | ✅      |
 | CI/CD pipleine from your repo                     | ✅ (\*) |

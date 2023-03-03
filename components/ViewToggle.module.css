@@ -1,0 +1,23 @@
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.icons {
+    font-size: 1.3rem;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.icons:hover {
+    opacity: 1;
+}
+.iconsActive {
+    color: var(--13Blue);
+    opacity: 0.8;
+}
+.divider {
+ background-color:lightgrey;
+ height: 1rem;   
+ margin: 0 0.5rem;
+ width: 1px;
+}

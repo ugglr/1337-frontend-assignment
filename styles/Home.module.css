@@ -1,0 +1,10 @@
+.filterContainer {
+    padding: 2rem;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+    margin-top: 2rem;
+    box-shadow: var(--boxShadow);
+}

@@ -1,14 +1,26 @@
-import Head from "next/head";
-import styles from "@/styles/Home.module.css";
-import { Employee, loadEmployees } from "@/lib/loadEmployees";
+import { useState } from "react";
 import { NextPage } from "next";
+import Head from "next/head";
+import { Employee, loadEmployees } from "@/lib/loadEmployees";
+
 import EmployeeGrid from "@/components/EmployeeGrid";
-import Filter from "@/components/Filter";
+import EmployeeList from "@/components/EmployeeList";
+
+import styles from "@/styles/Home.module.css";
+import ViewToggle from "@/components/ViewToggle";
+
+export type Views = "grid" | "list";
 
 type Props = {
   employees: Employee[];
 };
 const HomePage: NextPage<Props> = ({ employees }) => {
+  const [currentView, setCurrentView] = useState<Views>("grid");
+
+  const onToggle = (view: Views) => {
+    if (currentView !== view) setCurrentView(view);
+  };
+
   return (
     <>
       <Head>
@@ -18,8 +30,14 @@ const HomePage: NextPage<Props> = ({ employees }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Filter />
-        <EmployeeGrid {...{ employees }} />
+        <div className={styles.filterContainer}>
+          <ViewToggle {...{ currentView, onToggle }} />
+        </div>
+        {currentView === "list" ? (
+          <EmployeeList {...{ employees }} />
+        ) : (
+          <EmployeeGrid {...{ employees }} />
+        )}
       </main>
     </>
   );
